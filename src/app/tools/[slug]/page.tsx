@@ -7,17 +7,16 @@ import { getTool, tools } from "@/lib/tools";
 const siteUrl = "https://awesomedevkit.com";
 
 type PageProps = {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
   return tools.map((tool) => ({ slug: tool.slug }));
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
-  const tool = getTool(params.slug);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const tool = getTool(slug);
   if (!tool) {
     return {};
   }
@@ -42,8 +41,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
-export default function ToolPage({ params }: PageProps) {
-  const tool = getTool(params.slug);
+export default async function ToolPage({ params }: PageProps) {
+  const { slug } = await params;
+  const tool = getTool(slug);
   if (!tool) {
     notFound();
   }

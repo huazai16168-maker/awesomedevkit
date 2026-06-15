@@ -203,7 +203,7 @@ export default function SocialCardPreviewerPage() {
                   <span className="text-xs font-semibold text-slate-500">
                     {field.label}
                   </span>
-                  {field.multiline ? (
+                  {'multiline' in field && field.multiline ? (
                     <textarea
                       className="rounded-lg border border-slate-300 px-3 py-2 text-sm"
                       value={meta[field.key as keyof SocialMeta] as string}
