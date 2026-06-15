@@ -1,0 +1,21 @@
+# AwesomeDevKit
+
+AwesomeDevKit is a free developer tools lab for indie hackers, SaaS founders, and app developers.
+
+The site focuses on practical tools that help builders launch faster, improve landing page clarity, prepare SEO/GEO-friendly content, and create launch copy.
+
+## Core tools
+
+- https://awesomedevkit.com/ai-search-visibility-checker - Check whether a landing page is clear enough for AI search and answer engines.
+- https://awesomedevkit.com/landing-page-seo-roast - Review landing page SEO basics, positioning, and conversion clarity.
+- https://awesomedevkit.com/saas-pricing-page-copy-generator - Draft SaaS pricing page copy, plan names, and objections.
+- https://awesomedevkit.com/product-hunt-launch-copy-generator - Draft Product Hunt taglines, maker comments, and launch posts.
+- https://awesomedevkit.com/app-launch-checklist-generator - Generate a practical app launch checklist for App Store, Google Play, Product Hunt, and social launch tasks.
+
+## Related site
+
+- https://launchassetkit.com - App Store and Google Play launch asset tools for screenshot captions, store sizes, ASO copy, localization notes, and launch asset reviews.
+
+## Contact
+
+Email: huazai16168@gmail.com
