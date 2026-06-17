@@ -7,27 +7,27 @@ const siteUrl = "https://awesomedevkit.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "AwesomeDevKit - Practical Tools for Indie Developers",
+    default: "Free Developer Tools — AI Visibility, SEO, Launch & Dev Utilities | AwesomeDevKit",
     template: "%s | AwesomeDevKit"
   },
   description:
-    "Free launch, SEO, GEO, pricing, and copy tools for indie developers, SaaS founders, and developer tool makers.",
+    "12 free developer tools for indie founders: AI search visibility checker, landing page SEO roast, Product Hunt launch copy, SaaS pricing page generator, and dev utilities. No login, no API keys, no cost.",
   alternates: {
     canonical: "/"
   },
   openGraph: {
-    title: "AwesomeDevKit",
+    title: "AwesomeDevKit — Free Developer Tools for Indie Founders",
     description:
-      "Practical launch and growth tools for indie developers, SaaS founders, and developer tool makers.",
+      "12 free tools: AI visibility, SEO roast, Product Hunt copy, pricing page generator, and developer utilities. No login, no cost.",
     url: siteUrl,
     siteName: "AwesomeDevKit",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "AwesomeDevKit",
+    title: "AwesomeDevKit — Free Developer Tools",
     description:
-      "Free launch and growth tools for indie developers, SaaS founders, and developer tool makers."
+      "12 free tools for indie developers: AI search visibility, SEO audit, launch copy, and dev utilities. No login, no cost."
   }
 };
 
