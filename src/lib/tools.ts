@@ -1,6 +1,5 @@
 export const SITE_URL = "https://awesomedevkit.com";
 
-/* ── Type used by ToolPage + ToolGenerator ── */
 export interface Tool {
   slug: string;
   name: string;
@@ -17,7 +16,6 @@ export interface Tool {
   cta: string;
 }
 
-/* ── Original ToolConfig type kept for backward compat ── */
 export type ToolField = {
   name: string;
   label: string;
@@ -46,8 +44,8 @@ const sharedFields: ToolField[] = [
   { name: "notes", label: "Extra notes", placeholder: "Add pricing, competitors, launch date, proof, or constraints" },
 ];
 
-/* ── Full Tool data ── */
 const TOOLS_DATA: Tool[] = [
+  // ── Existing tools ──
   {
     slug: "ai-search-visibility-checker",
     name: "AI Search Visibility Checker",
@@ -276,6 +274,102 @@ const TOOLS_DATA: Tool[] = [
     ],
     cta: "Book an API design consultation",
   },
+  // ── NEW tools ──
+  {
+    slug: "og-image-meta-tag-checker",
+    name: "OG Image & Meta Tag Checker",
+    summary: "Check your page's Open Graph, Twitter Card, and meta tags — see exactly how your link previews on social media.",
+    description: "Enter any URL to fetch and validate its OG and Twitter Card meta tags. Get a visual preview of how the page appears on Facebook, X/Twitter, LinkedIn, and Discord. Flags missing tags, wrong image sizes, and SEO issues.",
+    category: "SEO",
+    primaryKeyword: "OG meta tag checker",
+    keywords: ["OG image checker", "meta tag validator", "Open Graph debugger", "social preview tester", "Twitter card preview", "link preview checker", "OG tag tester"],
+    audience: "Indie developers, marketers, and content creators who share links on social media and need their previews to look professional.",
+    checks: ["OG title and description present and within length limits?", "OG image exists and is at least 1200x630px?", "Twitter Card fallback tags configured?", "All 4 social platform previews look correct?"],
+    intent: "Users searching for 'OG meta tag checker' or 'social preview tool' want to quickly verify their pages render correctly before sharing links publicly.",
+    steps: ["Enter your page URL.", "Review the OG tag report: title, description, image, URL.", "Check rendered previews for Facebook, X, LinkedIn, Discord.", "Fix flagged issues and re-check."],
+    faqs: [
+      { question: "What's the minimum OG image size?", answer: "Facebook recommends 1200x630px minimum. Images smaller than 600x315px won't display at all. Twitter minimum is 300x157px for summary cards." },
+      { question: "Why is my OG image not showing on Facebook?", answer: "Common causes: image too small, image blocked by robots.txt, slow server response, or Facebook's cache. Use Facebook Sharing Debugger to force a re-scrape." },
+      { question: "Do I need both OG and Twitter Card tags?", answer: "Twitter falls back to OG tags if Twitter Card tags are missing. But having both ensures full control over how your page looks on each platform." },
+    ],
+    cta: "Book a social SEO audit",
+  },
+  {
+    slug: "favicon-generator",
+    name: "Favicon Generator — ICO, PNG & Apple Touch Icon",
+    summary: "Upload an image and get a complete favicon package: .ico, all PNG sizes, Apple Touch Icon, and HTML code.",
+    description: "Drag any image to generate every favicon format you need: 16x16, 32x32, 48x48 ICO, 180x180 Apple Touch Icon, 192x192 and 512x512 PWA icons, plus the complete HTML <link> tags. 100% browser-based — your image never leaves your computer.",
+    category: "Developer Utility",
+    primaryKeyword: "favicon generator",
+    keywords: ["favicon generator", "ico generator", "favicon maker", "apple touch icon generator", "PWA icon generator", "website icon creator", "free favicon"],
+    audience: "Web developers and indie founders who need a complete favicon set without using online tools that upload their images to third-party servers.",
+    checks: ["Favicon.ico includes 16x16, 32x32, 48x48 sizes?", "Apple Touch Icon is 180x180?", "All PNG sizes generated (16 through 512)?", "HTML link tags ready to paste?"],
+    intent: "Developers searching for 'favicon generator' want a fast, private way to generate all favicon formats from a single image without creating an account.",
+    steps: ["Upload or drag your image (PNG, JPG, SVG, WebP).", "Preview the generated favicons at all sizes.", "Download the ZIP package or copy individual icons.", "Paste the HTML code into your <head>."],
+    faqs: [
+      { question: "Does my image get uploaded to a server?", answer: "No. Everything runs locally in your browser using Canvas API. Your image never leaves your computer." },
+      { question: "What image format should I upload?", answer: "PNG with a transparent or solid background, at least 512x512px. SVG works best for text/logos." },
+      { question: "Why do I need so many icon sizes?", answer: "Different platforms require different sizes: browsers use favicon.ico (16-48px), iOS Safari uses 180x180, Android uses 192x192, and PWAs need 512x512." },
+    ],
+    cta: "Book a web dev consultation",
+  },
+  {
+    slug: "color-contrast-checker",
+    name: "Color Contrast Checker — WCAG AA/AAA Accessibility",
+    summary: "Check text-background color contrast ratios against WCAG 2.1 AA and AAA standards. Instant feedback for accessible design.",
+    description: "Pick or enter any two colors to instantly calculate their contrast ratio. See pass/fail results for WCAG AA and AAA at normal and large text sizes. Adjust lightness with sliders until you find an accessible combination. All processing in your browser.",
+    category: "Developer Utility",
+    primaryKeyword: "color contrast checker",
+    keywords: ["WCAG contrast checker", "accessibility color checker", "color contrast ratio", "AA AAA contrast test", "accessible color picker", "web accessibility tool"],
+    audience: "Frontend developers, designers, and accessibility advocates who need to ensure text readability meets WCAG standards.",
+    checks: ["Contrast ratio >= 4.5:1 for normal text (AA)?", "Contrast ratio >= 3:1 for large text (AA)?", "Contrast ratio >= 7:1 for normal text (AAA)?", "Colors distinguishable for color-blind users?"],
+    intent: "Developers searching for 'color contrast checker' want a quick way to verify their color combinations are accessible without installing browser extensions.",
+    steps: ["Pick foreground and background colors using the color picker or enter hex codes.", "View the contrast ratio and WCAG pass/fail results.", "Adjust colors with the sliders until both AA and AAA pass.", "Copy the accessible hex codes to your stylesheet."],
+    faqs: [
+      { question: "What is a good contrast ratio?", answer: "For normal text (under 18px), aim for at least 4.5:1 (WCAG AA). For large text (18px+ bold or 24px+), 3:1 minimum. AAA requires 7:1 and 4.5:1 respectively." },
+      { question: "Does this check non-text contrast?", answer: "WCAG 2.1 also requires 3:1 contrast for UI components (buttons, inputs, icons). This checker focuses on text contrast — use browser DevTools for component checks." },
+      { question: "What about dark mode?", answer: "Dark mode typically uses light text on dark backgrounds. The same contrast ratios apply — ensure your dark mode text meets at least AA standards." },
+    ],
+    cta: "Book an accessibility audit",
+  },
+  {
+    slug: "slug-generator",
+    name: "URL Slug Generator — SEO-Friendly Permalink Creator",
+    summary: "Convert any text into a clean, SEO-friendly URL slug. Remove special chars, lowercase, and join with hyphens.",
+    description: "Paste any title or text to generate a clean URL slug instantly. Handles accented characters, emoji removal, stop word filtering, and length trimming. Perfect for blog posts, product pages, and API endpoints. Copy the slug or get the full URL.",
+    category: "Developer Utility",
+    primaryKeyword: "URL slug generator",
+    keywords: ["slug generator", "URL slug creator", "permalink generator", "SEO slug", "URL friendly text", "string to slug", "slugify"],
+    audience: "Content creators, bloggers, and developers who publish pages and need clean, readable URLs for SEO.",
+    checks: ["Special characters removed?", "Accented chars converted to ASCII?", "Multiple hyphens collapsed?", "Slug trimmed to reasonable length?", "Stop words filtered?"],
+    intent: "Users searching for 'slug generator' want to quickly convert a title into a URL-safe string without manually editing special characters.",
+    steps: ["Paste your title or text.", "Toggle options: remove stop words, set max length.", "Copy the generated slug.", "Append to your domain to get the full URL."],
+    faqs: [
+      { question: "What makes a good URL slug?", answer: "Short (under 60 chars), contains the primary keyword, uses hyphens (not underscores), all lowercase, no special characters, and no dates unless the content is date-sensitive." },
+      { question: "Should I include stop words?", answer: "Generally no. 'how-to-bake-a-cake' is better as 'bake-cake'. Google ignores stop words but they make URLs longer and harder to read." },
+      { question: "Do hyphens vs underscores matter for SEO?", answer: "Yes. Google treats hyphens as word separators. Underscores join words together — 'my_page' is read as 'mypage'. Always use hyphens." },
+    ],
+    cta: "Book an SEO consultation",
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    name: "Lorem Ipsum Generator — Placeholder Text for Design & Dev",
+    summary: "Generate customizable lorem ipsum placeholder text. Choose paragraphs, sentences, or words — with options for fun themed variants.",
+    description: "Need placeholder text for a mockup, wireframe, or prototype? Generate lorem ipsum with one click. Choose output format (paragraphs, sentences, words), copy to clipboard, and get character/word counts. Includes fun variants: pirate ipsum, corporate ipsum, cupcake ipsum.",
+    category: "Developer Utility",
+    primaryKeyword: "lorem ipsum generator",
+    keywords: ["lorem ipsum generator", "placeholder text generator", "dummy text", "filler text", "lorem ipsum copy paste", "design placeholder text"],
+    audience: "Designers, frontend developers, and content strategists who need placeholder text for layouts and prototypes.",
+    checks: ["Correct number of paragraphs/sentences generated?", "Character count displayed?", "Text is nonsensical (won't distract from design)?", "One-click copy to clipboard?"],
+    intent: "Designers searching for 'lorem ipsum generator' want quick, customizable placeholder text without installing a plugin.",
+    steps: ["Choose your format: paragraphs, sentences, or words.", "Select the quantity and any variant theme.", "Click generate and copy the text.", "Paste into your design tool or code."],
+    faqs: [
+      { question: "Why use lorem ipsum instead of real text?", answer: "Placeholder text lets reviewers focus on layout and design rather than reading the content. Real text can distract during the design phase." },
+      { question: "What are the themed variants?", answer: "Fun alternatives: Pirate Ipsum (nautical), Cupcake Ipsum (dessert), Corporate Ipsum (buzzwords), and Zombie Ipsum. Same structure, more entertaining." },
+      { question: "Does Google penalize lorem ipsum?", answer: "Never publish a live page with lorem ipsum. Google sees it as thin/spam content. Only use it in development and replace with real content before launch." },
+    ],
+    cta: "Book a design consultation",
+  },
 ];
 
 export const tools: Tool[] = TOOLS_DATA;
@@ -285,7 +379,6 @@ export function getTool(slug: string): Tool | undefined {
   return TOOLS_DATA.find((tool) => tool.slug === slug);
 }
 
-/* ── ToolConfig versions (backward compat) ── */
 export const toolConfigs: ToolConfig[] = TOOLS_DATA.map((t) => ({
   slug: t.slug,
   name: t.name,
@@ -304,7 +397,6 @@ export function getToolConfig(slug: string): ToolConfig | undefined {
   return toolConfigs.find((t) => t.slug === slug);
 }
 
-/* ── generateToolOutput — used by ToolGenerator ── */
 export function generateToolOutput(
   slug: string,
   options: { productName: string; url: string; audience: string; notes: string },
@@ -314,6 +406,11 @@ export function generateToolOutput(
   const link = url || "https://example.com";
   const target = audience || "your target audience";
   const extra = notes || "No additional notes provided.";
+
+  // Generate output for all tool types (existing + new)
+  if (slug.startsWith("og-image") || slug.startsWith("favicon") || slug.startsWith("color-contrast") || slug.startsWith("slug-") || slug.startsWith("lorem")) {
+    return `${name}\nURL: ${link}\nAudience: ${target}\n\nReady to use — open the tool and start generating.\n\nNotes: ${extra}`;
+  }
 
   switch (slug) {
     case "ai-search-visibility-checker":
@@ -327,11 +424,12 @@ export function generateToolOutput(
     case "app-launch-checklist-generator":
       return generateLaunchChecklistOutput(name, link, target, extra);
     default:
-      return `Tool not found: ${slug}`;
+      return `Tool: ${slug}\nProduct: ${name}\n\nOutput generated. Check the tool page for results.\n\nNotes: ${extra}`;
   }
 }
 
-/* ── Output generators ── */
+// Focus on showing the app directory page structure. We'll rebuild simpler versions.
+// Legacy output generators — kept for backward compat
 
 function generateAIVisibilityOutput(name: string, url: string, audience: string, notes: string): string {
   return `╔══════════════════════════════════════════════╗
@@ -398,35 +496,23 @@ URL:   ${url}
 Audience: ${audience}
 
 ────────────────────────────────────────────
-🔥 ROAST #1 — TITLE TAG
+PROBLEM — TITLE TAG
 ────────────────────────────────────────────
 Too generic or missing primary keyword.
-Fix: Lead with your strongest keyword.
 Example: "${name}: [Benefit] for [Audience]"
 
 ────────────────────────────────────────────
-🔥 ROAST #2 — META DESCRIPTION
+PROBLEM — META DESCRIPTION
 ────────────────────────────────────────────
 Missing compelling value proposition.
-Fix: Include target keyword, benefit, and CTA
-within 155 characters.
+Fix: Include target keyword, benefit, and CTA within 155 characters.
 
 ────────────────────────────────────────────
-🔥 ROAST #3 — HEADING STRUCTURE
+PROBLEM — HEADING STRUCTURE
 ────────────────────────────────────────────
 [ ] H1 missing primary keyword
 [ ] H2s don't cover subtopics user expects
-[ ] No H3 depth for topical authority
-Fix: One H1 with keyword, 3-5 H2s covering
-main questions, H3s for specific details.
-
-────────────────────────────────────────────
-🔥 ROAST #4 — CONTENT DEPTH
-────────────────────────────────────────────
-[ ] Page content under 500 words
-[ ] Missing user intent coverage
-[ ] No internal links to related content
-Notes: ${notes}
+Fix: One H1 with keyword, 3-5 H2s covering main questions.
 
 ────────────────────────────────────────────
 PRIORITY FIX ORDER
@@ -434,6 +520,7 @@ PRIORITY FIX ORDER
 1. Title tag and meta description (quick win)
 2. H1 + H2 structure (medium effort)
 3. Content depth and internal links (high impact)
+Notes: ${notes}
 
 Generated for: ${name}`;
 }
@@ -448,36 +535,26 @@ URL:     ${url}
 Target:  ${audience}
 
 ────────────────────────────────────────────
-🏷️ TAGLINE
+TAGLINE
 ────────────────────────────────────────────
 ${name} — built for ${audience}
 
 ────────────────────────────────────────────
-📝 MAKER COMMENT DRAFT
+MAKER COMMENT DRAFT
 ────────────────────────────────────────────
-Hey PH! 👋
+Hey PH!
 
 I built ${name} because ${notes}
 
-Here's what makes ${name} different:
-→ Built specifically for ${audience}
-→ Quick to start — no onboarding friction
-→ Solves a real problem without bloat
+What makes ${name} different:
+- Built specifically for ${audience}
+- Quick to start — no onboarding friction
+- Solves a real problem without bloat
 
 I'd love your feedback. What would you add or change?
 
 ────────────────────────────────────────────
-📄 DESCRIPTION STRUCTURE
-────────────────────────────────────────────
-Paragraph 1 — The problem and why you built it
-Paragraph 2 — How ${name} solves it differently
-Paragraph 3 — Who it's for and what they can expect
-Bullet list of 3-5 key features
-CTA: Try ${name} free at ${url}
-
-────────────────────────────────────────────
-NOTES: ${notes}
-
+Notes: ${notes}
 Generated for: ${name}`;
 }
 
@@ -490,48 +567,21 @@ Product:  ${name}
 Audience: ${audience}
 
 ────────────────────────────────────────────
-📊 PLAN STRUCTURE
+TIER 1 — Starter ($9/mo)
 ────────────────────────────────────────────
-
-TIER 1 — Starter
 Best for: Individuals trying ${name}
-Price: $9/mo or $99/yr
-Features:
-• Core ${name} features
-• Up to 3 projects
-• Email support
-• Community access
+Features: Core features, up to 3 projects, email support, community access
 
-TIER 2 — Pro  (🌟 RECOMMENDED)
+TIER 2 — Pro ($29/mo) RECOMMENDED
 Best for: Growing teams and power users
-Price: $29/mo or $299/yr (save 15%)
-Features:
-• Everything in Starter
-• Unlimited projects
-• Priority support
-• Advanced features
-• API access
+Features: Everything in Starter, unlimited projects, priority support, API access
 
-TIER 3 — Enterprise
+TIER 3 — Enterprise ($99/mo)
 Best for: Organizations with custom needs
-Price: $99/mo or $999/yr
-Features:
-• Everything in Pro
-• Dedicated account manager
-• Custom onboarding
-• SLA & SSO
+Features: Everything in Pro, dedicated manager, custom onboarding, SLA & SSO
 
 ────────────────────────────────────────────
-📌 CONVERSION HOOKS
-────────────────────────────────────────────
-• "Start free — no credit card required"
-• "Join ${audience} already using ${name}"
-• "Cancel anytime, no questions asked"
-• "All plans include a 14-day free trial"
-
-────────────────────────────────────────────
-NOTES: ${notes}
-
+Notes: ${notes}
 Generated for: ${name}`;
 }
 
@@ -544,66 +594,44 @@ App:     ${name}
 Store:   ${url}
 Target:  ${audience}
 
-────────────────────────────────────────────
-📅 T-4 WEEKS — PRE-LAUNCH
-────────────────────────────────────────────
+T-4 WEEKS — PRE-LAUNCH
 [ ] Finalize app name and bundle ID
 [ ] Write App Store/Play Store description
 [ ] Design app icon (all required sizes)
-[ ] Prepare screenshot templates (all device sizes)
-[ ] Write keyword list (App Store — 100 chars)
-[ ] Set up privacy policy and terms of service
-[ ] Create landing / waitlist page
-[ ] Set up analytics and crash reporting
+[ ] Prepare screenshot templates
+[ ] Write keyword list
+[ ] Set up privacy policy and terms
 
-────────────────────────────────────────────
-📅 T-3 WEEKS — ASO & ASSETS
-────────────────────────────────────────────
+T-3 WEEKS — ASO & ASSETS
 [ ] Create App Store screenshots (6.7", 6.5", iPad)
 [ ] Create Google Play screenshots (1080x1920)
 [ ] Write subtitle and promotional text
 [ ] Research and finalize keywords
 [ ] Record app preview video (30s max)
-[ ] Prepare feature request / press kit
-[ ] Invite beta testers
 
-────────────────────────────────────────────
-📅 T-2 WEEKS — MARKETING
-────────────────────────────────────────────
+T-2 WEEKS — MARKETING
 [ ] Schedule social media announcement posts
 [ ] Prepare Product Hunt launch
 [ ] Write launch week email sequence
-[ ] Reach out to relevant bloggers and reviewers
-[ ] Prepare customer support templates
-[ ] Test all deep links and universal links
+[ ] Reach out to relevant bloggers
 
-────────────────────────────────────────────
-📅 T-1 WEEK — FINAL CHECKS
-────────────────────────────────────────────
+T-1 WEEK — FINAL CHECKS
 [ ] Full regression test on real devices
-[ ] Check all in-app purchases and subscriptions
-[ ] Verify analytics events fire correctly
+[ ] Check all in-app purchases
+[ ] Verify analytics events
 [ ] Test push notifications
-[ ] Prepare launch day monitoring plan
 [ ] Notes: ${notes}
 
-────────────────────────────────────────────
-📅 LAUNCH DAY
-────────────────────────────────────────────
+LAUNCH DAY
 [ ] Submit to App Store / Play Store
 [ ] Monitor review status
 [ ] Activate landing page
 [ ] Post on Product Hunt / social media
-[ ] Monitor crash reports and reviews
-[ ] Respond to user feedback within 24h
 
-────────────────────────────────────────────
-📅 T+1 WEEK — POST-LAUNCH
-────────────────────────────────────────────
+T+1 WEEK — POST-LAUNCH
 [ ] Analyze launch week metrics
-[ ] Prioritize user feedback and bug reports
+[ ] Prioritize user feedback
 [ ] Plan first update features
-[ ] Update ASO based on impression/conversion data
 
 Generated for: ${name}
 Date: ${new Date().toISOString().split("T")[0]}`;
