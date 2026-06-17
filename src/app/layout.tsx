@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             AwesomeDevKit
           </Link>
           <nav className="site-nav" aria-label="Primary navigation">
-            <Link href="/tools">Tools</Link>
+            <Link href="/tools">All Tools (17)</Link>
             <a href="https://launchassetkit.com" target="_blank" rel="noreferrer">
               LaunchAssetKit
             </a>
