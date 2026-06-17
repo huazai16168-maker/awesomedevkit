@@ -5,8 +5,9 @@ import { getTool } from "@/lib/tools";
 const tool = getTool("landing-page-seo-roast")!;
 
 export const metadata: Metadata = {
-  title: tool.name,
-  description: tool.description,
+  title: "Free Landing Page SEO Roast — Blunt Audit in 60 Seconds",
+  description:
+    "Get a brutally honest SEO audit of your landing page: title tags, meta description, heading structure, keyword usage, content depth, and mobile readiness. No fluff. No login. Just actionable fixes for indie founders.",
   alternates: { canonical: `/${tool.slug}` },
 };
 
