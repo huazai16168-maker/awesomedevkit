@@ -1,0 +1,63 @@
+
+> awesomedevkit@0.1.0 build
+> next build
+
+   ▲ Next.js 15.3.3
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 5.0s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/47) ...
+   Generating static pages (11/47) 
+   Generating static pages (23/47) 
+   Generating static pages (35/47) 
+ ✓ Generating static pages (47/47)
+   Finalizing page optimization ...
+   Collecting build traces ...
+   Exporting (0/3) ...
+ ✓ Exporting (3/3)
+
+Route (app)                                         Size  First Load JS
+┌ ○ /                                              194 B         105 kB
+├ ○ /_not-found                                    144 B         101 kB
+├ ○ /ai-search-visibility-checker                  211 B         119 kB
+├ ○ /ai-search-visibility-guide                    194 B         105 kB
+├ ○ /app-launch-checklist-generator                211 B         119 kB
+├ ○ /base64-encoder-decoder                      1.61 kB         103 kB
+├ ○ /best-free-developer-tools                     194 B         105 kB
+├ ○ /best-free-json-formatter                      194 B         105 kB
+├ ○ /best-free-regex-tester                        194 B         105 kB
+├ ○ /color-contrast-checker                        211 B         119 kB
+├ ○ /contact                                       144 B         101 kB
+├ ○ /cron-expression-generator                   2.29 kB         103 kB
+├ ○ /diff-checker                                1.55 kB         103 kB
+├ ○ /favicon-generator                             211 B         119 kB
+├ ○ /free-seo-tools-indie-developers               194 B         105 kB
+├ ○ /json-formatter                              2.29 kB         103 kB
+├ ○ /landing-page-seo-roast                        211 B         119 kB
+├ ○ /lorem-ipsum-generator                         211 B         119 kB
+├ ○ /og-image-meta-tag-checker                     211 B         119 kB
+├ ○ /privacy                                       144 B         101 kB
+├ ○ /product-hunt-launch-copy-generator            211 B         119 kB
+├ ○ /regex-tester                                1.96 kB         103 kB
+├ ○ /saas-pricing-page-copy-generator              211 B         119 kB
+├ ○ /slug-generator                                211 B         119 kB
+├ ○ /social-card-previewer                       3.79 kB         105 kB
+├ ○ /terms                                         144 B         101 kB
+├ ○ /tools                                         194 B         105 kB
+├ ● /tools/[slug]                                  282 B         119 kB
+├   ├ /tools/ai-search-visibility-checker
+├   ├ /tools/product-hunt-launch-copy-generator
+├   ├ /tools/saas-pricing-page-copy-generator
+├   └ [+14 more paths]
+└ ○ /uuid-generator                              1.73 kB         103 kB
++ First Load JS shared by all                     101 kB
+  ├ chunks/4bd1b696-88a963ebe322000b.js          53.2 kB
+  ├ chunks/684-a303300c81f1f65f.js                 46 kB
+  └ other shared chunks (total)                  1.96 kB
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+

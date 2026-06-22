@@ -5,7 +5,7 @@ import { tools } from "@/lib/tools";
 export const metadata: Metadata = {
   title: "Free Developer Tools — AI Visibility, SEO, Launch & Dev Utilities",
   description:
-    "12 free developer tools for indie founders: AI search visibility checker, Product Hunt launch copy, SEO roast, pricing page generator, regex tester, cron builder, JSON formatter, diff checker, UUID generator, and more. No login, no API keys, no token cost.",
+    "22 free developer tools for indie founders: AI search visibility checker, Product Hunt launch copy, SEO roast, pricing page generator, regex tester, cron builder, JSON formatter, diff checker, UUID generator, SQL formatter, JWT decoder, image compressor, YAML validator, JSON to CSV converter, and more. No login, no API keys, no token cost.",
   alternates: {
     canonical: "/tools"
   }
@@ -43,7 +43,7 @@ export default function ToolsPage() {
         <p className="eyebrow">Tool library</p>
         <h1>Free tools for developer growth experiments</h1>
         <p className="hero-text">
-          Twelve focused utilities built for indie developers, SaaS founders, and
+          Twenty-two focused utilities built for indie developers, SaaS founders, and
           product builders. Each tool targets a single task — AI search visibility,
           launch copy, landing page SEO, pricing page drafts, or everyday dev work —
           and delivers a useful output without login, API keys, or token cost.
@@ -125,7 +125,7 @@ export default function ToolsPage() {
         <div className="copy-block">
           <h3>Are these tools really free?</h3>
           <p>
-            Yes. All twelve tools are free to use with no login, no API keys, and no
+            Yes. All twenty-two tools are free to use with no login, no API keys, and no
             token cost. We built them to help indie developers move faster, and
             keeping them free means more people can benefit.
           </p>

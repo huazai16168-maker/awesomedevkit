@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     template: "%s | AwesomeDevKit"
   },
   description:
-    "12 free developer tools for indie founders: AI search visibility checker, landing page SEO roast, Product Hunt launch copy, SaaS pricing page generator, and dev utilities. No login, no API keys, no cost.",
+    "22 free developer tools for indie founders: AI search visibility checker, landing page SEO roast, Product Hunt launch copy, SaaS pricing page generator, and dev utilities. No login, no API keys, no cost.",
   alternates: {
     canonical: "/"
   },
   openGraph: {
     title: "AwesomeDevKit — Free Developer Tools for Indie Founders",
     description:
-      "12 free tools: AI visibility, SEO roast, Product Hunt copy, pricing page generator, and developer utilities. No login, no cost.",
+      "22 free tools: AI visibility, SEO roast, Product Hunt copy, pricing page generator, and developer utilities. No login, no cost.",
     url: siteUrl,
     siteName: "AwesomeDevKit",
     type: "website"
@@ -27,20 +27,33 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AwesomeDevKit — Free Developer Tools",
     description:
-      "12 free tools for indie developers: AI search visibility, SEO audit, launch copy, and dev utilities. No login, no cost."
+      "22 free tools for indie developers: AI search visibility, SEO audit, launch copy, and dev utilities. No login, no cost."
   }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5T4F77YY1K"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-5T4F77YY1K');
+            `,
+          }}
+        />
+      </head>
       <body>
         <header className="site-header">
           <Link href="/" className="brand" aria-label="AwesomeDevKit home">
             AwesomeDevKit
           </Link>
           <nav className="site-nav" aria-label="Primary navigation">
-            <Link href="/tools">All Tools (17)</Link>
+            <Link href="/tools">All Tools (22)</Link>
             <a href="https://launchassetkit.com" target="_blank" rel="noreferrer">
               LaunchAssetKit
             </a>
